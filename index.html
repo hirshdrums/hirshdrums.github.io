@@ -85,11 +85,31 @@
             font-size: 0.9em;
             color: #555;
         }
-        .video-container {
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
             margin: 20px 0;
         }
-        .video-container iframe {
-            max-width: 100%;
+        .video-thumb {
+            position: relative;
+            display: block;
+        }
+        .video-thumb img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .video-thumb::after {
+            content: "▶";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 48px;
+            color: white;
+            text-shadow: 0 0 10px rgba(0,0,0,0.8);
+            pointer-events: none;
         }
     </style>
 </head>
@@ -97,7 +117,7 @@
     <h1>Steve Hirsh - Drumset Composer and Improviser</h1>
 
     <div class="hero-image">
-        <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdd2O4xTiGt76JyXjWJXE_SUJ6xlGIVCwOm92WVYEMw0E2KDrofAvOSHctsep8YtBscd2MYFEmsRRca69f0d7iq6MdflZk9wMGBPIqLb2w4xk45JDFHJtNhqp5HUp8qs_beUO31GZFR0f9BiInzcYhbcKEF?key=vGKdOWWJLeCuWMksL5dRaw" alt="Steve Hirsh" width="624" height="500">
+        <img src="images/hero.jpg" alt="Steve Hirsh" width="624" height="500">
     </div>
     <p class="photo-credit">Photo courtesy of Peter Gannushkin</p>
 
@@ -145,133 +165,132 @@
     <h2>Recordings</h2>
     <div class="recordings-grid">
         <div class="recording">
-            <a href="https://artedmaiston.bandcamp.com/album/the-back-9"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcPfUiC45TpRsKO7vg4doF7I31FF1X2DifNhCwNAVC2hhZI3TWp-qkXNHldb6kVd9FWxK-MBt5lsSk-z7Giz0Cqq1aDjgWV-tNZim979tah55QypXttMVxOZFva5rFHbizMno-zPydt7CFwanSy5rpyGBe-?key=vGKdOWWJLeCuWMksL5dRaw" alt="The Back 9"></a>
+            <a href="https://artedmaiston.bandcamp.com/album/the-back-9"><img src="images/back9.jpg" alt="The Back 9"></a>
             <div class="recording-info">
                 <div class="recording-title"><a href="https://artedmaiston.bandcamp.com/album/the-back-9">The Back 9</a></div>
                 <div class="recording-artists">Art Edmaiston, Steve Hirsh</div>
             </div>
         </div>
         <div class="recording">
-            <a href="https://sewelson.bandcamp.com/album/muscle-memory"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdKuD5WoNhvWPvZj1VLXm1MG6dL_fVAtRyj84n00AHNmX7zD1jb4X4byQQ6muCfVqc_6qGw87yRjgr-RSAUziIKuB9Er8UNlHZ4eEO2vFuYOaGPYJN228KrpwB1zAfI_dOxVeepAMO9ppoDqKRVQKCGXmk?key=vGKdOWWJLeCuWMksL5dRaw" alt="Muscle Memory"></a>
+            <a href="https://sewelson.bandcamp.com/album/muscle-memory"><img src="images/muscle-memory.jpg" alt="Muscle Memory"></a>
             <div class="recording-info">
                 <div class="recording-title"><a href="https://sewelson.bandcamp.com/album/muscle-memory">Muscle Memory</a></div>
                 <div class="recording-artists">Dave Sewelson, Steve Swell, Matthew Shipp, William Parker, Steve Hirsh</div>
             </div>
         </div>
         <div class="recording">
-            <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcVR625nYEZ0MhTxYYmGqFc5ALymwocSMOBorYL_YZJXu41XM0AGlEZZl_5ViwoUNajhlIqT-BG8ovGpqMeDv3wM0kggsHG5PRrPCPkF3Qcy7m_gqTiOLl6P7tIa3U4PujEA8GGdQt0eVLPn8iQKewB3wKf?key=vGKdOWWJLeCuWMksL5dRaw" alt="Murmuration">
+            <img src="images/murmuration.jpg" alt="Murmuration">
             <div class="recording-info">
                 <div class="recording-title">Murmuration</div>
                 <div class="recording-artists">Dave Sewelson, gabby fluke-mogul, George Cartwright, Anthony Cox, Steve Hirsh</div>
             </div>
         </div>
         <div class="recording">
-            <a href="https://mahakalamusic.bandcamp.com/album/phosphene"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXchohOohnacjHsYH0ZlcFKGrKW-LkXJUraZcQMnVx_kO15DEs9xSzwMWycGIEsF7mYYtLijn6eo_sYFDHdnEjzkfCZm0W3W7q7a3yjLlKHmwJPJzcOP6hNiJm8r8YkMR2DkVYCIsllVqVnGyxesLEYkPx_8?key=vGKdOWWJLeCuWMksL5dRaw" alt="Phosphene"></a>
+            <a href="https://mahakalamusic.bandcamp.com/album/phosphene"><img src="images/phosphene.jpg" alt="Phosphene"></a>
             <div class="recording-info">
                 <div class="recording-title"><a href="https://mahakalamusic.bandcamp.com/album/phosphene">Phosphene</a></div>
                 <div class="recording-artists">Sally Gates, Steve Hirsh, Daniel Carter</div>
             </div>
         </div>
         <div class="recording">
-            <a href="https://hirshswellclouseparker.bandcamp.com/album/out-on-a-limb"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXeesENh18P2vl-QyJivbUXy27k3LfeTxqG3sk_xWCgTt4erDjKKPg2fTk3fyDk0Yec9QJmX1jo9OecNJyKjjVLGrBAKfi5bjUqfcaBNc-oYckioicUrZvNSe0H0XuYDHpAGIIxwvRqu_AeQUPOPdR1xkb0P?key=vGKdOWWJLeCuWMksL5dRaw" alt="Out On A Limb"></a>
+            <a href="https://hirshswellclouseparker.bandcamp.com/album/out-on-a-limb"><img src="images/out-on-a-limb.jpg" alt="Out On A Limb"></a>
             <div class="recording-info">
                 <div class="recording-title"><a href="https://hirshswellclouseparker.bandcamp.com/album/out-on-a-limb">Out On A Limb</a></div>
                 <div class="recording-artists">Steve Hirsh, Steve Swell, Jim Clouse, William Parker</div>
             </div>
         </div>
         <div class="recording">
-            <a href="https://mahakalamusic.bandcamp.com/album/sparks-quartet-live-at-vision-festival-xxvi"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdq4cB3-L1DPu2VE-5dVEFxjlGN77egLMDGzrhJwky3OWLk0kMB-7pB8773lkVfw6kOrbyJi5pCpB1pbug7_8OqtIpU7YsL4IK1J3SoMrmokQfHD63M7jPhgBVdC5xIwdLFzIhtjA3p8vlr_7oTmn0B3cpe?key=vGKdOWWJLeCuWMksL5dRaw" alt="Sparks Quartet Live"></a>
+            <a href="https://mahakalamusic.bandcamp.com/album/sparks-quartet-live-at-vision-festival-xxvi"><img src="images/sparks-live.jpg" alt="Sparks Quartet Live"></a>
             <div class="recording-info">
                 <div class="recording-title"><a href="https://mahakalamusic.bandcamp.com/album/sparks-quartet-live-at-vision-festival-xxvi">Sparks Quartet Live At Vision Festival XXVI</a></div>
                 <div class="recording-artists">Eri Yamamoto, Chad Fowler, William Parker, Steve Hirsh</div>
             </div>
         </div>
         <div class="recording">
-            <a href="https://mahakalamusic.bandcamp.com/album/miserere"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfvFPKkohaqzHH2PIZWelRRNsRvS1CUoQHumQ-MpGcmeq9CUiQ-bIj6OMOFkjeSRZn1Lre8XrwzAC-lT-sCqhbm8q0kTUZboaELkH0d531s5r12czvIDLIVl6tF6PlPArf0Js1j9z3orohP8imT9gSpWnPL?key=vGKdOWWJLeCuWMksL5dRaw" alt="Miserere"></a>
+            <a href="https://mahakalamusic.bandcamp.com/album/miserere"><img src="images/miserere.jpg" alt="Miserere"></a>
             <div class="recording-info">
                 <div class="recording-title"><a href="https://mahakalamusic.bandcamp.com/album/miserere">Miserere</a></div>
                 <div class="recording-artists">Chad Fowler, George Cartwright, Zoh Amba, Christopher Parker, Kelley Hurt, Luke Stewart, Steve Hirsh</div>
             </div>
         </div>
         <div class="recording">
-            <a href="https://mahakalamusic.bandcamp.com/album/the-gate"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXf1xfEdI8Pk-KIXk6QkAlWPHIdKdEkpg3TEbDmV65V0R-AHIUQ2fkJr0BkxvjajdNd0IWIjpAmPt5pQELEeJvHqhsY2n9tqsesOwXOpAixVCP1zgMIEYccv6Xn7yNNboq9vP7UerDl0rhclzXyH4Pnyu4vo?key=vGKdOWWJLeCuWMksL5dRaw" alt="The Gate"></a>
+            <a href="https://mahakalamusic.bandcamp.com/album/the-gate"><img src="images/the-gate.jpg" alt="The Gate"></a>
             <div class="recording-info">
                 <div class="recording-title"><a href="https://mahakalamusic.bandcamp.com/album/the-gate">The Gate</a></div>
                 <div class="recording-artists">Dave Sewelson, William Parker, Steve Hirsh</div>
             </div>
         </div>
         <div class="recording">
-            <a href="https://mahakalamusic.bandcamp.com/album/alien-skin"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcVPBrk2zmfdlecWK--oxtvxtxBKapBPxE-UPQ8scjBShDeNmfdt9d3lNAf6jNNffDeg0fEo1hfk392I_el6WPxAYJPHBxUTAAtg_-tEwgGXbVkHxHpx-VGpTGnaDDzvBJQeZXxJb6RJBRM_e6m48cmOVBP?key=vGKdOWWJLeCuWMksL5dRaw" alt="Alien Skin"></a>
+            <a href="https://mahakalamusic.bandcamp.com/album/alien-skin"><img src="images/alien-skin.jpg" alt="Alien Skin"></a>
             <div class="recording-info">
                 <div class="recording-title"><a href="https://mahakalamusic.bandcamp.com/album/alien-skin">Alien Skin</a></div>
                 <div class="recording-artists">Ivo Perelman, Chad Fowler, Zoh Amba, Matthew Shipp, William Parker, Steve Hirsh</div>
             </div>
         </div>
         <div class="recording">
-            <a href="https://mahakalamusic.bandcamp.com/album/the-deep"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdnpewYyOm2FioBtX0NC_ekEywSIRH0OaFake_kE2api0VaFy-OpkD7vOM0zUqQHET7pmNdRemMJ5MdRXrHQqtr4xbmDrIw73vAjFMz04N0n76gcyyL6IgttRwcc6rtyb9UZo34MvEsALpDUqjB8Ce54pSv?key=vGKdOWWJLeCuWMksL5dRaw" alt="The Deep"></a>
+            <a href="https://mahakalamusic.bandcamp.com/album/the-deep"><img src="images/the-deep.jpg" alt="The Deep"></a>
             <div class="recording-info">
                 <div class="recording-title"><a href="https://mahakalamusic.bandcamp.com/album/the-deep">The Deep</a></div>
                 <div class="recording-artists">Joel Futterman, Chad Fowler, William Parker, Steve Hirsh</div>
             </div>
         </div>
         <div class="recording">
-            <a href="https://mahakalamusic.bandcamp.com/album/sparks"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfuitZ6pPTHrReZBx9gTm2gDYzcX2lMEm9uKhNp_pQc27D14HNSV7fq3ZhTD8I-YXV6ZE4amafAHqM9gM7hiiK8lOeXBclKuwa32gfZf3hQ-uTMMdlNCYiIonqUO813LHlFT_1EzvxI4Xnnf-EYA3TTGhNX?key=vGKdOWWJLeCuWMksL5dRaw" alt="Sparks"></a>
+            <a href="https://mahakalamusic.bandcamp.com/album/sparks"><img src="images/sparks.jpg" alt="Sparks"></a>
             <div class="recording-info">
                 <div class="recording-title"><a href="https://mahakalamusic.bandcamp.com/album/sparks">Sparks</a></div>
                 <div class="recording-artists">Eri Yamamoto, Chad Fowler, William Parker, Steve Hirsh</div>
             </div>
         </div>
         <div class="recording">
-            <a href="https://mahakalamusic.bandcamp.com/album/ebb-flow"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXd_RWtSYT1kiKWHHR-Fi3bJ-IFnGARmbAdhOq_Dr_56STeRmGC57lHxGsVGjln8cPdRRi_tIENrtD7ORTJ47896tMxg4S9EWy7dpPXAaCPQSitNDivkZgwKC494AOhEaWzVoy-T_f8do-D7fwtjIvUrGVc?key=vGKdOWWJLeCuWMksL5dRaw" alt="Ebb & Flow"></a>
+            <a href="https://mahakalamusic.bandcamp.com/album/ebb-flow"><img src="images/ebb-flow.jpg" alt="Ebb & Flow"></a>
             <div class="recording-info">
                 <div class="recording-title"><a href="https://mahakalamusic.bandcamp.com/album/ebb-flow">Ebb & Flow</a></div>
                 <div class="recording-artists">Joel Futterman, Chad Fowler, Steve Hirsh</div>
             </div>
         </div>
         <div class="recording">
-            <a href="https://mahakalamusic.bandcamp.com/album/notice-that-there"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXd_dXjIMFvrZz-Q14ilGv1tjlx9JD-2vZ_-kiqJ-vijiahWMgPFHG413hCSJB1fHf8qvt9OneZsGRICDv5CP5SLEfvVFJMZ3BLEMB2gmGHB_npfMDCQrAMwOCDRUYcenDQVGgQ5g03MQqiL13r5fPNdaAg1?key=vGKdOWWJLeCuWMksL5dRaw" alt="Notice That There"></a>
+            <a href="https://mahakalamusic.bandcamp.com/album/notice-that-there"><img src="images/notice-that-there.jpg" alt="Notice That There"></a>
             <div class="recording-info">
                 <div class="recording-title"><a href="https://mahakalamusic.bandcamp.com/album/notice-that-there">Notice That There</a></div>
                 <div class="recording-artists">Chad Fowler, George Cartwright, Christopher Parker, Kelley Hurt, Steve Hirsh</div>
             </div>
         </div>
         <div class="recording">
-            <a href="https://mahakalamusic.bandcamp.com/album/warp-weft"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfYKv3F7DeAZOrnEk5PUIa8TzLxiNQLqm_XnlCkf3EU_CcLzJyuj9M2DIUp5X0zUS6_vZeR2dHdoq8e_gVh1txzEQEqHfZdbGX3jpgelL9-DgSHYqg2_zr-DzQHuf0GDT8yjF0-P0w7UE8CMn5Na2XhPtNs?key=vGKdOWWJLeCuWMksL5dRaw" alt="Warp & Weft"></a>
+            <a href="https://mahakalamusic.bandcamp.com/album/warp-weft"><img src="images/warp-weft.jpg" alt="Warp & Weft"></a>
             <div class="recording-info">
                 <div class="recording-title"><a href="https://mahakalamusic.bandcamp.com/album/warp-weft">Warp & Weft</a></div>
                 <div class="recording-artists">Joel Futterman, Steve Hirsh</div>
             </div>
         </div>
         <div class="recording">
-            <a href="https://stevehirsh.bandcamp.com/album/an-unlikely-place"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXenDEhw6kFyJTsSaD89B8_umQPKLBR_S7jNSyouwtDC8S5zYjNx13aQWVt37qelvOB9RcifPZ0ZhvrqslMfZWtDABSeakND92byt_MEG3eCusx2ck_mrqiggIEqYs5OmYVB_-FQaksxJ1tPxtpKW-499qA?key=vGKdOWWJLeCuWMksL5dRaw" alt="An Unlikely Place"></a>
+            <a href="https://stevehirsh.bandcamp.com/album/an-unlikely-place"><img src="images/an-unlikely-place.jpg" alt="An Unlikely Place"></a>
             <div class="recording-info">
                 <div class="recording-title"><a href="https://stevehirsh.bandcamp.com/album/an-unlikely-place">An Unlikely Place</a></div>
                 <div class="recording-artists">Zoh Amba, Luke Stewart, Steve Hirsh</div>
             </div>
         </div>
         <div class="recording">
-            <a href="https://mahakalamusic.bandcamp.com/album/two-five-none"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXeVve8IVS8Ac-o9LOj5m64b7Iu7PDKaTYGiO4aC3F4CytXRZ1V6E5mwoDkdwd5OAbrdyibcaEHg-jnxnp6TApk_40mb7djbk7P4timTErQVaTsGq1xQ5Qmh0eOO3_9LUjqdObXaqNOfo7tuBE4B3BwhdZG_?key=vGKdOWWJLeCuWMksL5dRaw" alt="Two Five None"></a>
+            <a href="https://mahakalamusic.bandcamp.com/album/two-five-none"><img src="images/two-five-none.jpg" alt="Two Five None"></a>
             <div class="recording-info">
                 <div class="recording-title"><a href="https://mahakalamusic.bandcamp.com/album/two-five-none">Two Five None</a></div>
                 <div class="recording-artists">Chad Fowler, Steve Hirsh</div>
             </div>
         </div>
         <div class="recording">
-            <a href="https://originalmind.bandcamp.com/album/you-know-when-its-time?label=3914039610&tab=music"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdstYa2wfQLczXRcOURFbKoPWl_8d4M5eldIfPG187mKf5mFkoqtboTbRRFTc414n0ULw3o8V4otkGwrLi7xhdJy6hjEaK_yjjhWK4Z7NiAbbCfqI7g29eX91Pc8H3_FuD_1vEpAHVZ_h509ndmqi1hOgzZ?key=vGKdOWWJLeCuWMksL5dRaw" alt="You Know When It's Time"></a>
+            <a href="https://originalmind.bandcamp.com/album/you-know-when-its-time?label=3914039610&tab=music"><img src="images/you-know-when.jpg" alt="You Know When It's Time"></a>
             <div class="recording-info">
                 <div class="recording-title"><a href="https://originalmind.bandcamp.com/album/you-know-when-its-time?label=3914039610&tab=music">You Know When It's Time</a></div>
                 <div class="recording-artists">Original Mind - Steve Hirsh, Brad Holden, Dick Studer</div>
             </div>
         </div>
         <div class="recording">
-            <a href="https://stevehirsh.bandcamp.com/album/so-now-drumset-orchestra"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXeSNSW_WN4JuohQAebgeA1qLiXMGFDPemdhi82lssc4pvfnZWV-sCAGH5P1LJQIY2vwZVuJJEQwd1VdrV3zNr4zIJJ3j1EWNjiwNaU9vmegcV6EaCcgUL3XYQKfZfNQcYPKxfc1uOueo8C7ir-JRp7yoQLh?key=vGKdOWWJLeCuWMksL5dRaw" alt="So Now"></a>
+            <a href="https://stevehirsh.bandcamp.com/album/so-now-drumset-orchestra"><img src="images/so-now.jpg" alt="So Now"></a>
             <div class="recording-info">
                 <div class="recording-title"><a href="https://stevehirsh.bandcamp.com/album/so-now-drumset-orchestra">So Now - Drumset Orchestra</a></div>
                 <div class="recording-artists">Steve Hirsh - Solo Drumset</div>
             </div>
         </div>
         <div class="recording">
-            <a href="https://thestatelesstrio.bandcamp.com/">
             <div class="recording-info">
                 <div class="recording-title"><a href="https://thestatelesstrio.bandcamp.com/">The Stateless Trio</a></div>
                 <div class="recording-artists">A trans-oceanic collaboration between Steve Hirsh, Rick Countryman and Richard Allan Bates</div>
@@ -280,26 +299,28 @@
     </div>
 
     <h2>Videos</h2>
-    <div class="video-container">
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/uye3YoJcuyE" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="video-container">
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/0yBjrssMxYg?start=2400" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="video-container">
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/d5Lx7tAIb0A" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="video-container">
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/jp9wPJ9rOhk" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="video-container">
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/xeqektCmLYs" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="video-container">
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/c7HkT-bL4V4" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="video-container">
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/uXKVEbqJtas" frameborder="0" allowfullscreen></iframe>
+    <div class="videos-grid">
+        <a class="video-thumb" href="https://www.youtube.com/watch?v=uye3YoJcuyE" target="_blank">
+            <img src="https://img.youtube.com/vi/uye3YoJcuyE/hqdefault.jpg" alt="Video">
+        </a>
+        <a class="video-thumb" href="https://www.youtube.com/watch?v=0yBjrssMxYg&t=2400" target="_blank">
+            <img src="https://img.youtube.com/vi/0yBjrssMxYg/hqdefault.jpg" alt="Video">
+        </a>
+        <a class="video-thumb" href="https://www.youtube.com/watch?v=d5Lx7tAIb0A" target="_blank">
+            <img src="https://img.youtube.com/vi/d5Lx7tAIb0A/hqdefault.jpg" alt="Video">
+        </a>
+        <a class="video-thumb" href="https://www.youtube.com/watch?v=jp9wPJ9rOhk" target="_blank">
+            <img src="https://img.youtube.com/vi/jp9wPJ9rOhk/hqdefault.jpg" alt="Video">
+        </a>
+        <a class="video-thumb" href="https://www.youtube.com/watch?v=xeqektCmLYs" target="_blank">
+            <img src="https://img.youtube.com/vi/xeqektCmLYs/hqdefault.jpg" alt="Video">
+        </a>
+        <a class="video-thumb" href="https://www.youtube.com/watch?v=c7HkT-bL4V4" target="_blank">
+            <img src="https://img.youtube.com/vi/c7HkT-bL4V4/hqdefault.jpg" alt="Video">
+        </a>
+        <a class="video-thumb" href="https://www.youtube.com/watch?v=uXKVEbqJtas" target="_blank">
+            <img src="https://img.youtube.com/vi/uXKVEbqJtas/hqdefault.jpg" alt="Video">
+        </a>
     </div>
 
     <p><a href="https://www.youtube.com/@chesterpester1919/videos">More Videos here</a></p>
